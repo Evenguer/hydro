@@ -1,0 +1,46 @@
+/* src/estilos/VerProgreso.css */
+.ver-progreso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .tarjeta-progreso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .detalles-progreso {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  button {
+    background-color: #003366;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #00509e;
+  }
+  
+  .btn-restablecer {
+    background-color: #ff6600;
+  }
+  
+  .btn-restablecer:hover {
+    background-color: #ff8533;
+  }

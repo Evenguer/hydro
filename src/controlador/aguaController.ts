@@ -1,4 +1,4 @@
-// src/controller/aguaController.ts
+// src/controlador/aguaController.ts
 import { RegistroAgua, MetaDiaria } from '../types';
 
 const REGISTROS_AGUA_KEY = 'registrosAgua';
@@ -29,4 +29,10 @@ export const establecerMetaDiaria = (meta: MetaDiaria) => {
 export const obtenerMetaDiaria = (usuarioId: number): MetaDiaria | null => {
   const metas: MetaDiaria[] = JSON.parse(localStorage.getItem(METAS_DIARIAS_KEY) || '[]');
   return metas.find(meta => meta.usuarioId === usuarioId) || null;
+};
+
+export const borrarRegistrosAgua = (usuarioId: number) => {
+  const registros: RegistroAgua[] = JSON.parse(localStorage.getItem(REGISTROS_AGUA_KEY) || '[]');
+  const registrosFiltrados = registros.filter(registro => registro.usuarioId !== usuarioId);
+  localStorage.setItem(REGISTROS_AGUA_KEY, JSON.stringify(registrosFiltrados));
 };

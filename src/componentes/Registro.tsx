@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { registrarUsuario } from '../controlador/authController';
 import { Usuario } from '../types';
-import '../estilos/Registro.css'; // Importa el archivo CSS
 
 const Registro: React.FC = () => {
   const [nombre, setNombre] = useState('');
